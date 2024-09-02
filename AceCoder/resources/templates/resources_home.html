@@ -12,9 +12,9 @@
         <div class="left-sidebar-container">   <!-- Left sidebar content -->
             <h3 style='font-weight: bold; padding-left: 50px'> Topics </h3> <br>
             <ul class='right-bar'>
-                <a href="{% url "resources_home" %}"><li><button class="btn btn-light" style="width: 180px;">All</button></li></a>
+                <a href="{% url "resources_home" %}"><li><button class="btn btn-light" style="width: 180px;padding-left: 0px">All</button></li></a>
                 {% for tag in all_tags %}
-                <a href="{% url "tag_posts" tag.post_tag %}"><li><button {% if forloop.counter|divisibleby:2 %} class="btn btn-light" {% else %} class="btn btn-secondary" {% endif %} style="width: 180px;">{{ tag.post_tag }}</button></li></a>
+                <a href="{% url "tag_posts" tag.post_tag %}"><li><button {% if forloop.counter|divisibleby:2 %} class="btn btn-light" {% else %} class="btn btn-secondary" {% endif %} style="width: 180px;padding-left: 0px">{{ tag.post_tag }}</button></li></a>
                 {% endfor %}
             </ul>
         </div>

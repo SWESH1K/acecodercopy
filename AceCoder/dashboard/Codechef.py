@@ -110,6 +110,5 @@ class CodechefTools:
 if __name__ == "__main__":
     obj = CodechefTools("sweshikreddy")
     obj.account_exists()
-    details = obj.fetch_contest_problems()
-    for arr in details.values():
-        print(", ".join(arr))
+    details = obj.feth_details()
+    print(details)
